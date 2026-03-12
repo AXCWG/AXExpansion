@@ -3,5 +3,4 @@
   <Project Path="AXExpansion.Miscellaneous/AXExpansion.Miscellaneous.csproj" />
   <Project Path="AXExpansion.Tests/AXExpansion.Tests.csproj" />
   <Project Path="AXExpansion/AXExpansion.csproj" />
-  <Project Path="SimpleJsonStorage/SimpleJsonStorage.csproj" />
 </Solution>
