@@ -10,6 +10,12 @@
         <Authors>AXCWG</Authors>
         <Description>Simple JSON Storage with ORM to a certain degree. </Description>
         <PackageTags>console;json;storage;database</PackageTags>
+        <RepositoryUrl>https://github.com/AXCWG/AXExpansion</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        
     </PropertyGroup>
 
 </Project>
