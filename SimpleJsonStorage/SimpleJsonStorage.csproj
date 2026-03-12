@@ -5,7 +5,7 @@
         <LangVersion>preview</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>SimpleJsonStorage</PackageId>
+        <PackageId>SimpleOrmJsonStorage</PackageId>
         <Version>1.0.0</Version>
         <Authors>AXCWG</Authors>
         <Description>Simple JSON Storage with ORM to a certain degree. </Description>
@@ -13,9 +13,12 @@
         <RepositoryUrl>https://github.com/AXCWG/AXExpansion</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <ReadmeFile>README.md</ReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
-   
+   <ItemGroup>
+       <None Include="README.md" Pack="true" PackagePath="\"/>
+
+   </ItemGroup>
 
 </Project>
