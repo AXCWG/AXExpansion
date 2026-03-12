@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using SimpleJsonStorage;
 
 namespace AXExpansion.Tests;
 
@@ -44,11 +46,24 @@ public sealed class Test1
     {
         "{0}, {1}".PrintLnF(2, 4);
     }
+
+    [TestMethod]
+    public void Storage()
+    {
+        var p = new ProgramStorage<Hi>("axexpansion.test", "test");
+        p.Set(new Hi
+        {
+            Content = "Hello World",
+            Fucked = true, _dddd = "22222222222"
+        });
+    }
 }
 
 public class Hi
 {
-    public required string Content { get; set; }
+    public string? Content { get; set; }
+    public bool Fucked { get; set; }
+    public string _dddd;
 }
 
 [JsonSerializable(typeof(Hi))]

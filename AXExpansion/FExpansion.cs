@@ -34,5 +34,13 @@ public static class FExpansion
         }
         
     }
+
+    extension(string path)
+    {
+        public string PathJoin(params string[] paths)
+        {
+            return Path.Join([path, ..paths]); 
+        }
+    }
 }
 
