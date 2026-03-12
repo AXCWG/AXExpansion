@@ -151,7 +151,7 @@ public class ProgramStorage<T> : IProgramStorage<T> where T: new()
     /// <returns>Value of specified property / field</returns>
     /// <exception cref="NullReferenceException">Object is null. </exception>
     /// <exception cref="InvalidOperationException">Specifying field name with no JsonSerializerOptions which has IncludeFields property set to true. </exception>
-    public T2? Get<T2>(Expression<Func<T, T2>> expression)
+    public T2 Get<T2>(Expression<Func<T, T2>> expression)
     {
         T? i = JsonSerializer.Deserialize<T>(File.ReadAllText(ProgramStoragePath), JsonSerializerOptions);
         if (i == null)
@@ -163,7 +163,7 @@ public class ProgramStorage<T> : IProgramStorage<T> where T: new()
         {
             if (memberExpression.Member is PropertyInfo propInfo)
             {
-                return (T2?)typeof(T).GetProperty(propInfo.Name)?.GetValue(i);
+                return (T2)typeof(T).GetProperty(propInfo.Name)?.GetValue(i)!;
             }
 
             if (memberExpression.Member is FieldInfo fieldInfo)
@@ -174,13 +174,17 @@ public class ProgramStorage<T> : IProgramStorage<T> where T: new()
                         "While specifying fields, please ensure a JsonSerializerOption with IncludeFields = true is passed in the construction of this object. ");
                 }
 
-                return (T2?)typeof(T).GetField(fieldInfo.Name)?.GetValue(i);
+                return (T2)typeof(T).GetField(fieldInfo.Name)?.GetValue(i)!;
             }
         }
         return (T2)(dynamic)i; 
     }
 }
 
+[RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+#if NET7_0_OR_GREATER
+[RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
 public class ProgramStorageSet<T> : IProgramStorage<IEnumerable<T>>, ICollection<T>
 {
     public ProgramStorageSet(string identifier, string name, string? path = null, JsonSerializerOptions? options = null)
@@ -273,6 +277,11 @@ public class ProgramStorageSet<T> : IProgramStorage<IEnumerable<T>>, ICollection
         Set([..Get(), obj]);
     }
 
+    public void AddRange(IEnumerable<T> obj)
+    {
+        Set([..Get(), ..obj]);
+    }
+
     public void Clear()
     {
         Set([]);
@@ -331,4 +340,12 @@ public interface IProgramStorage<T>
     JsonSerializerOptions JsonSerializerOptions { get; }
     T? Get();
     void Set(T obj);
+}
+
+internal static class Null
+{
+    public static bool CheckIfNull<T>(T value)
+    {
+        return !typeof(T).IsClass || value != null;
+    }
 }

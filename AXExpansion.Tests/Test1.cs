@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
+using AXExpansion.AXHelper.Helpers;
 using SimpleJsonStorage;
 
 namespace AXExpansion.Tests;
@@ -71,6 +72,31 @@ public sealed class Test1
         var p = new SampleStoragePool("axexpansion.test");
         p.Strings.Add("Hello world. ");
     }
+
+    [TestMethod]
+    public void BasicInputOutputHandling()
+    {
+        var p = new AppStorage();
+        p.AlbumCovers.Add(new()
+        {
+            Uuid = Guid.NewGuid().ToString(),
+            Name = "Dark side of the moon"
+        });
+        p.Ids.Add(new()
+        {
+            Uuid = Guid.NewGuid().ToString(),
+            Host = "8.141.5.12"
+        });
+        p.Settings.Set(i=>i.IsOn, false);
+        p.Settings.Get(i => i.Name)?.Length.PrintLn();
+        p.Ids.SPrintLn();
+        var x = Enumerable.Range(1, 2555).Select(_ => new Id
+        {
+            Uuid = Guid.NewGuid().ToString(),
+            Host = "2222"
+        }).ToList();
+        p.Ids.AddRange(x); 
+    }
 }
 
 public class Hi
@@ -85,4 +111,34 @@ public class Hi
 [JsonSerializable(typeof(string))]
 public partial class HiSerializerContext : JsonSerializerContext
 {
+}
+
+public class AlbumCover
+{
+    public required string Uuid { get; set; }
+    public required string Name { get; set; }
+}
+
+public class Id
+{
+    public required string Uuid { get; set; }
+    public required string Host { get; set; }
+}
+
+public class Setting
+{
+    public bool IsAdmin { get; set; }
+    public string? Name { get; set; }
+    public bool IsOn{ get; set; }
+}
+public sealed class AppStorage : StoragePool
+{
+    public ProgramStorageSet<AlbumCover> AlbumCovers { get; set; } = null!;
+    public ProgramStorageSet<Id> Ids { get; set; } = null!;
+    public ProgramStorage<Setting> Settings { get; set; } = null!; 
+    
+    public AppStorage()
+    {
+        OnConfiguring("com.axcwg.test", new JsonSerializerOptions{WriteIndented = true});
+    }
 }
