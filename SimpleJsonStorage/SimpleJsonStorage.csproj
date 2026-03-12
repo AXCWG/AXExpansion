@@ -5,11 +5,11 @@
         <LangVersion>preview</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>SimpleOrmJsonStorage</PackageId>
+        <PackageId>SimpleJsonStorageOrm</PackageId>
         <Version>1.0.0</Version>
         <Authors>AXCWG</Authors>
         <Description>Simple JSON Storage with ORM to a certain degree. </Description>
-        <PackageTags>console;json;storage;database</PackageTags>
+        <PackageTags>console;json;storage;database;crud;orm</PackageTags>
         <RepositoryUrl>https://github.com/AXCWG/AXExpansion</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

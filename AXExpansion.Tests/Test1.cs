@@ -57,6 +57,20 @@ public sealed class Test1
             Fucked = true, _dddd = "22222222222"
         });
     }
+
+    [TestMethod]
+    public void EnumerableStorage()
+    {
+        var p = new ProgramStorageSet<string>("axexpansion.test", "ienumerableTest");
+        
+    }
+
+    [TestMethod]
+    public void StoragePoolTest()
+    {
+        var p = new SampleStoragePool("axexpansion.test");
+        p.Strings.Add("Hello world. ");
+    }
 }
 
 public class Hi
@@ -64,6 +78,7 @@ public class Hi
     public string? Content { get; set; }
     public bool Fucked { get; set; }
     public string _dddd;
+
 }
 
 [JsonSerializable(typeof(Hi))]

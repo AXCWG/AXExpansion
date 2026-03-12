@@ -1,20 +1,23 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fxieyi_002FDownloads_002FSimpleJsonStorage_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AJsonSerializer_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F10b68c1562414d85b1582ec49a41ea67201508_003F88_003F4e7278e8_003FJsonSerializer_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F5abfc2f9674a4781aabbad089c04d62e1046310_003F3e_003F9a8a6d92_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASafeFileHandle_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F5abfc2f9674a4781aabbad089c04d62e1046310_003F29_003F2b712fd8_003FSafeFileHandle_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASimpleStorage_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fe8948b8ab0394405979e1fd5d23b4bfe2200_003Fbb_003F780e89ba_003FSimpleStorage_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASqliteConnectionStringBuilder_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F2e65f11bdfce447cb0397d93dd2041132b620_003F1e_003F667e87fd_003FSqliteConnectionStringBuilder_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/xieyi/Downloads/SimpleJsonStorage.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d610edd1_002D443b_002D47a9_002Dbd82_002Dd796fa25d4e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.TestMethod1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.CbSerialize&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.IntegratedObjectPrint&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.WriteFormat&lt;/TestId&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d610edd1_002D443b_002D47a9_002Dbd82_002Dd796fa25d4e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.TestMethod1&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.CbSerialize&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.IntegratedObjectPrint&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.WriteFormat&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Storage&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.EnumerableStorage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.StoragePoolTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	</wpf:ResourceDictionary>
