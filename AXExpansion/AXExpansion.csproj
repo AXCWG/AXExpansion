@@ -14,7 +14,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>IDisposable</PackageReleaseNotes>
+        <PackageReleaseNotes>ChunkWith() and GetRandom()</PackageReleaseNotes>
 
     </PropertyGroup>
     <ItemGroup>
