@@ -8,5 +8,3 @@ NuGet
 [AXExpansion.AspNetCore](https://www.nuget.org/packages/AXExpansion.AspNetCore/)
 
 [AXExpansion.Miscellaneous](https://www.nuget.org/packages/AXExpansion.Miscellaneous/)
-
-[SimpleOrmJsonStorage (SimpleJsonStorage)](https://www.nuget.org/packages/SimpleOrmJsonStorage/)

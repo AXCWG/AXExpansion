@@ -8,17 +8,17 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/xieyi/Downloads/SimpleJsonStorage.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d610edd1_002D443b_002D47a9_002Dbd82_002Dd796fa25d4e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.TestMethod1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.CbSerialize&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.IntegratedObjectPrint&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.WriteFormat&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Storage&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.EnumerableStorage&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.StoragePoolTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.BasicInputOutputHandling&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d610edd1_002D443b_002D47a9_002Dbd82_002Dd796fa25d4e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.TestMethod1&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.CbSerialize&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.IntegratedObjectPrint&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.WriteFormat&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Storage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.EnumerableStorage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.StoragePoolTest&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.BasicInputOutputHandling&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	</wpf:ResourceDictionary>

@@ -17,11 +17,19 @@ public static class ObjectExpansion
         public string Serialize(JsonSerializerOptions? options = null) 
             => JsonSerializer.Serialize(obj, options);
 
+        [RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+#if NET7_0_OR_GREATER
+        [RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
         public void Serialize(Action<string> cb, JsonSerializerOptions? options = null)
         {
             cb.Invoke(obj.Serialize(options));
         }
 
+        [RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+#if NET7_0_OR_GREATER
+        [RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
         public TR Serialize<TR>(Func<string, TR> cb, JsonSerializerOptions? options = null)
         {
             return cb.Invoke(obj.Serialize(options));
@@ -75,6 +83,44 @@ public static class ObjectExpansion
         public void PrintLnF(params object[] args)
         {
             Console.WriteLine(s, args);
+        }
+    }
+
+    extension<T>(IEnumerable<T> e)
+    {
+        /// <summary>
+        /// Comparing to ChunkBy(), specify how many chunks you want to have.
+        /// </summary>
+        /// <param name="count">Specify how many chunks you want to have.</param>
+        /// <returns></returns>
+        /// <exception cref="Exception">Strange stuff happened</exception>
+        public IEnumerable<IEnumerable<T>> ChunkWith(int count)
+        {
+            var arrayBox = new List<T>[count]; 
+            for (var i = 0; i < arrayBox.Length; i++)
+            {
+                arrayBox[i] = new List<T>();
+            }
+            var arrayBoxEnumerator = arrayBox.GetEnumerator();
+            var t = e.ToList(); 
+            while (t.Count != 0)
+            {
+                if (!arrayBoxEnumerator.MoveNext())
+                {
+                    arrayBoxEnumerator.Reset();
+                    continue; 
+                }
+                var item = t.ToArray()[Random.Shared.Next(t.Count)]; 
+                ((List<T>)(arrayBoxEnumerator.Current ?? throw new Exception())).Add(item);
+                t.Remove(item);
+            }
+            return arrayBox;
+        }
+
+        public T GetRandom()
+        {
+            var enumerable = e as T[] ?? e.ToArray();
+            return enumerable.ElementAt(Random.Shared.Next(enumerable.Length));
         }
     }
 }
