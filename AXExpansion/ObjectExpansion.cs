@@ -34,17 +34,31 @@ public static class ObjectExpansion
         {
             return cb.Invoke(obj.Serialize(options));
         }
-
+        /// <summary>
+        /// NativeAOT Serialization.
+        /// </summary>
+        /// <param name="j"></param>
+        /// <returns></returns>
         public string Serialize(JsonTypeInfo<T> j)
         {
             return JsonSerializer.Serialize(obj, j); 
         }
-
+        /// <summary>
+        /// NativeAOT Serialization with callbacks.
+        /// </summary>
+        /// <param name="cb"></param>
+        /// <param name="j"></param>
         public void Serialize(Action<string> cb, JsonTypeInfo<T> j)
         {
             cb.Invoke(obj.Serialize(j));
         }
-
+        /// <summary>
+        /// NativeAOT Serialization with callbacks that return.
+        /// </summary>
+        /// <param name="cb"></param>
+        /// <param name="j"></param>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
         public TResult Serialize<TResult>(Func<string, TResult> cb, JsonTypeInfo<T> j)
         {
             return cb.Invoke(obj.Serialize(j)); 
@@ -63,13 +77,24 @@ public static class ObjectExpansion
 
         public void SPrintLn(JsonSerializerOptions? options = null)
         {
-            obj.Serialize(s => s.PrintLn(), options ?? new JsonSerializerOptions(){WriteIndented = true});
+            obj.Serialize(s => s.PrintLn(), options ?? new JsonSerializerOptions {WriteIndented = true});
         }
         
         public void SPrint(JsonSerializerOptions? options = null)
         {
             obj.Serialize(s=>s.Print(), options ?? new JsonSerializerOptions{WriteIndented = true});
         }
+    }
+
+    extension(object? obj)
+    {
+        public bool IsNull() => obj is null;
+    }
+
+    extension(string? s)
+    {
+        public bool IsNullOrWhiteSpace() => string.IsNullOrWhiteSpace(s);
+        public bool IsNullOrEmpty() =>  string.IsNullOrEmpty(s);
     }
     extension(string s)
     {
@@ -89,14 +114,39 @@ public static class ObjectExpansion
     extension<T>(IEnumerable<T> e)
     {
         /// <summary>
+        /// Get a range of element. 
+        /// </summary>
+        /// <param name="range">Specified range to take. </param>
+        /// <returns></returns>
+        public IEnumerable<T> ElementAtRange(Range range)
+        {
+            return e.ToArray()[range].AsEnumerable();
+        }
+        /// <summary>
+        /// Get a range of elements. If the range is not applicable in this enumerable, default value is returned. 
+        /// </summary>
+        /// <param name="range">Specified range to take. </param>
+        /// <param name="default">Could be used to set default behavior. </param>
+        /// <returns></returns>
+        public IEnumerable<T>? ElementAtRangeOrDefault(Range range, IEnumerable<T>? @default = null)
+        {
+            var enumerable = e as T[] ?? e.ToArray();
+            if (enumerable.ElementAtOrDefault(range.Start) is not null && enumerable.ElementAtOrDefault(range.End) is not null)
+            {
+                return @default;
+            }
+
+            return enumerable.ElementAtRange(range); 
+        }
+        /// <summary>
         /// Comparing to ChunkBy(), specify how many chunks you want to have.
         /// </summary>
-        /// <param name="count">Specify how many chunks you want to have.</param>
+        /// <param name="countOfChunks">Specify how many chunks you want to have.</param>
         /// <returns></returns>
         /// <exception cref="Exception">Strange stuff happened</exception>
-        public IEnumerable<IEnumerable<T>> ChunkWith(int count)
+        public IEnumerable<IEnumerable<T>> ChunkWith(int countOfChunks)
         {
-            var arrayBox = new List<T>[count]; 
+            var arrayBox = new List<T>[countOfChunks]; 
             for (var i = 0; i < arrayBox.Length; i++)
             {
                 arrayBox[i] = new List<T>();
@@ -116,7 +166,10 @@ public static class ObjectExpansion
             }
             return arrayBox;
         }
-
+        /// <summary>
+        /// Get random item from IEnumerable. 
+        /// </summary>
+        /// <returns></returns>
         public T GetRandom()
         {
             var enumerable = e as T[] ?? e.ToArray();
