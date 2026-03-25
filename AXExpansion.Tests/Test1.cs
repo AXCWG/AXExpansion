@@ -44,6 +44,13 @@ public sealed class Test1
     {
         "{0}, {1}".PrintLnF(2, 4);
     }
+
+    [TestMethod]
+    public void Range()
+    {
+        var a = new[] { 1, 2, 34, 5, 6 };
+        a.ElementAtRangeOrDefault(1..6).SPrintLn();
+    }
 }
 //     [TestMethod]
 //     public void Storage()

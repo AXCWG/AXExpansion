@@ -20,5 +20,19 @@
     &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.BasicInputOutputHandling&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e63c53c4_002D20a1_002D4068_002D9901_002D9097e91a6334/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.TestMethod1&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.CbSerialize&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.IntegratedObjectPrint&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.WriteFormat&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Storage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.EnumerableStorage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.StoragePoolTest&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.BasicInputOutputHandling&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.ElementAtRange&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Range&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	
 	</wpf:ResourceDictionary>

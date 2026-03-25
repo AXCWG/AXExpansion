@@ -131,7 +131,7 @@ public static class ObjectExpansion
         public IEnumerable<T>? ElementAtRangeOrDefault(Range range, IEnumerable<T>? @default = null)
         {
             var enumerable = e as T[] ?? e.ToArray();
-            if (enumerable.ElementAtOrDefault(range.Start) is  null || enumerable.ElementAtOrDefault(range.End) is  null)
+            if (enumerable.Length <= range.Start.Value || range.Start.Value < 0 || enumerable.Length < range.End.Value)
             {
                 return @default;
             }
