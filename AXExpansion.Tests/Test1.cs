@@ -166,3 +166,16 @@ public partial class HiSerializerContext : JsonSerializerContext
 //         OnConfiguring("com.axcwg.test", new JsonSerializerOptions{WriteIndented = true});
 //     }
 // }
+
+[TestClass]
+public class Test2
+{
+    [TestMethod]
+    public void ParseIParsable()
+    {
+        string source = "1231231231231";
+        Assert.AreEqual(source.TryParseOrDefault<long>(), long.TryParseOrDefault(source), 1231231231L);
+        Console.WriteLine("{0}, {1}", source, source.TryParseOrDefault<long>());
+        source.TryParse(out long r);
+    }
+}

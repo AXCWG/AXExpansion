@@ -1,5 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fxieyi_002FDownloads_002FSimpleJsonStorage_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIParsable_00601_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002Econfig_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fbeef1329912d4d25a082fc3302380fbcc2ca0_003F6e_003F4e2f6a92_003FIParsable_00601_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AJsonSerializer_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F10b68c1562414d85b1582ec49a41ea67201508_003F88_003F4e7278e8_003FJsonSerializer_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F5abfc2f9674a4781aabbad089c04d62e1046310_003F3e_003F9a8a6d92_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASafeFileHandle_002Ecs_002Fl_003A_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F5abfc2f9674a4781aabbad089c04d62e1046310_003F29_003F2b712fd8_003FSafeFileHandle_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -33,6 +34,7 @@
     &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.ElementAtRange&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Range&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test1.Test&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::CCB39D1A-8F80-C7F8-F816-4E586704D349::net10.0::AXExpansion.Tests.Test2&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
