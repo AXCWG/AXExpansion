@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System.Collections;
+using System.Reflection;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using AXExpansion.AXHelper.Helpers;
 
@@ -51,6 +53,24 @@ public sealed class Test1
         var a = new[] { 1, 2, 34, 5, 6 };
         a.ElementAtRangeOrDefault(1..6).SPrintLn();
     }
+
+    [TestMethod]
+    public void Test()
+    {
+        List<int> i = [1, 23, 3, 5, 6];
+        foreach (var memberInfo in i.GetType().GetMembers(BindingFlags.Public | BindingFlags.Instance))
+        {
+            if (memberInfo is MethodInfo m)
+            {
+                if (m.Name == "Add")
+                {
+                    
+                }
+                Console.WriteLine(m.Name);
+            }
+        }
+    }
+
 }
 //     [TestMethod]
 //     public void Storage()

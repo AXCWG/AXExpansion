@@ -17,7 +17,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AXExpansion\AXExpansion.csproj" />
-      <ProjectReference Include="..\SimpleJsonStorage\SimpleJsonStorage.csproj" />
     </ItemGroup>
 
 </Project>
