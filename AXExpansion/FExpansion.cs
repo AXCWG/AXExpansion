@@ -1,4 +1,6 @@
-﻿namespace AXExpansion;
+﻿using System.Collections;
+
+namespace AXExpansion;
 
 /// <summary>
 /// Fluent control, where method chains together. 
@@ -39,6 +41,22 @@ public static class FExpansion
             return l; 
         }
     }
+
+    extension<T>(ICollection<T> collection)
+    {
+        public void Remove(Func<T, bool> predicate)
+        {
+            for (int i = 0; i < collection.Count; i++)
+            {
+                if (predicate.Invoke(collection.ElementAt(i)))
+                {
+                    collection.Remove(collection.ElementAt(i));
+                    i--;
+                }
+            }
+        }
+    }
+
 
     extension(string path)
     {
