@@ -13,7 +13,7 @@ IEnumerable<T>.ChunkWith(int countOfChunks);
 IEnumerable<T>.GetRandom(); 
 IEnumerable<T>.ElementAtRange(Range r); 
 IEnumerable<T>.ElementAtRangeOrDefault(Range r, IEnumerable<T>? @default); 
-ICollection<T>.AddRange(IEnumerable<T> s); 
+ICollection<T>.AddRange(IEnumerable<T> s); [AXExpansion.csproj](AXExpansion/AXExpansion.csproj)
 // Fluent methods, where every call returns itself. 
 ICollection<T>.FAdd(T s); // Returns the same ICollection<T>.
 ICollection<T>.FAddRange(IEnumerable<T> s); 
@@ -21,6 +21,8 @@ IList<T>.FRemoveAt(int index);
 string.PathJoin(params string[] paths); 
 // StringHelper
 StringHelper.RandomString(int length, Format format = Format.Mixed);
+Object.With<T>(Action<T> action);
+Object.Transform<T, TResult>(Func<T, TResult> transform);
 ```
 
 NuGet

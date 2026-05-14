@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>AXExpansion</PackageId>
-        <Version>1.4.0</Version>
+        <Version>1.5.0</Version>
         <Authors>AXCWG</Authors>
         <Description>Self use helper. </Description>
         <PackageTags>helper;extension</PackageTags>
@@ -14,7 +14,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>ICollection.Remove(predicate)</PackageReleaseNotes>
+        <PackageReleaseNotes>Object.With() and Object.Transform()</PackageReleaseNotes>
 
     </PropertyGroup>
     <ItemGroup>

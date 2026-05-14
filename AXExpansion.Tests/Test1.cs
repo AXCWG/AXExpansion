@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.ObjectModel;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -69,6 +70,28 @@ public sealed class Test1
                 Console.WriteLine(m.Name);
             }
         }
+    }
+
+    [TestMethod]
+    public void ClassicScenarioForWithNTransform()
+    {
+        var observable = new ObservableCollection<long>().With(o => o.CollectionChanged += (s, e) =>
+        {
+            Console.WriteLine($"New for {(s as ObservableCollection<long>)!.Transform(p => {
+                var yieldResult = string.Empty;
+                foreach (var x1 in p)
+                {
+                    yieldResult += x1;
+                }
+                return yieldResult; 
+            })}");
+        });
+        observable.Add(2);
+        observable.Add(4);
+        observable.Add(6);
+        observable.Add(7);
+        observable.Add(8);
+        observable.Add(10);
     }
 
 }

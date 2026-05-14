@@ -175,5 +175,6 @@ public static class ObjectExpansion
             var enumerable = e as T[] ?? e.ToArray();
             return enumerable.ElementAt(Random.Shared.Next(enumerable.Length));
         }
+        
     }
 }

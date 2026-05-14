@@ -65,6 +65,48 @@ public static class FExpansion
             return Path.Join([path, ..paths]); 
         }
     }
+
+    extension<T>(T with)
+    {
+        /// <summary>
+        /// General fluent method chain. 
+        /// </summary>
+        /// <example>
+        /// <code>
+        /// <![CDATA[
+        /// var observable = new ObservableCollection<long>().With(o => o.CollectionChanged += (s, e) =>
+        /// {
+        ///    Console.WriteLine($"New for {(s as ObservableCollection<long>)!.Transform(p => {
+        ///        var yieldResult = string.Empty;
+        ///        foreach (var x1 in p)
+        ///        {
+        ///            yieldResult += x1;
+        ///        }
+        ///        return yieldResult; 
+        ///    })}");
+        /// });
+        /// ]]>
+        /// </code>
+        /// </example>
+        /// <param name="action">Action to invoke on the object. </param>
+        /// <returns>The object. </returns>
+        public T With(Action<T> action)
+        {
+            action.Invoke(with);
+            return with; 
+        }
+        /// <summary>
+        /// Designed for having the ability to "transform" an object into something else and immediately return it. Can be used for other uses. 
+        /// </summary>
+        /// <param name="transform">Delegate for transform. </param>
+        /// <typeparam name="TResult">Type you want to return, usually inferred on return type of Func transform.</typeparam>
+        /// <returns>The result of transform</returns>
+        public TResult Transform<TResult>(Func<T, TResult> transform)
+        {
+            return transform.Invoke(with);
+        }
+        
+    }
     
 }
 
