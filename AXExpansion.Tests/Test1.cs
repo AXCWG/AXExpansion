@@ -94,6 +94,12 @@ public sealed class Test1
         observable.Add(10);
     }
 
+    [TestMethod]
+    public void IntRange()
+    {
+        Assert.IsTrue(2.In(2..7));
+    }
+
 }
 //     [TestMethod]
 //     public void Storage()

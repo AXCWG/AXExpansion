@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Numerics;
 
 namespace AXExpansion;
 
@@ -62,7 +63,7 @@ public static class FExpansion
     {
         public string PathJoin(params string[] paths)
         {
-            return Path.Join([path, ..paths]); 
+            return Path.Join([path, ..paths]);
         }
     }
 
@@ -106,6 +107,11 @@ public static class FExpansion
             return transform.Invoke(with);
         }
         
+    }
+
+    extension(int num)
+    {
+        public bool In(Range x) => num >= x.Start.Value && num < x.End.Value;
     }
     
 }
