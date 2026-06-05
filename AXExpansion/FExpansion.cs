@@ -96,6 +96,18 @@ public static class FExpansion
             action.Invoke(with);
             return with; 
         }
+        
+        /// <summary>
+        /// Uses the object to compute a value via <paramref name="action"/> and returns the result.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the computed result.</typeparam>
+        /// <param name="action">The function that computes a value from the object.</param>
+        /// <returns>The value computed by <paramref name="action"/>.</returns>
+        public TResult With<TResult>(Func<T, TResult> action)
+        {
+            return action.Invoke(with);
+        }
+
         /// <summary>
         /// Designed for having the ability to "transform" an object into something else and immediately return it. Can be used for other uses. 
         /// </summary>
